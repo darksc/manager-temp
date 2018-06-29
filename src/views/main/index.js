@@ -42,7 +42,6 @@ class Main extends Component {
     this.setState({currentSelect: key})
   }
 
-
   render () {
 
     let title = null
