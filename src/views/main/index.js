@@ -2,15 +2,16 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { Layout, Menu, Icon } from 'antd'
 import moment from 'moment'
+import momentLocale from 'moment/locale/zh-cn'
 
 import MainRouter from '../../routers/mainRouter/'
 import mainRouterConfig from '../../routers/mainRouter/config'
 
 import './index.scss'
 
-const {Header, Sider, Content} = Layout
+moment.updateLocale('zh-cn', momentLocale)
 
-moment.locale('zh-cn')
+const {Header, Sider, Content} = Layout
 
 class Main extends Component {
 

@@ -4,7 +4,7 @@
  */
 
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import routerConfig from "./config"
 
 class AppRouter extends Component {
@@ -13,6 +13,7 @@ class AppRouter extends Component {
     return (
       <div className="main-module">
         {routerConfig.map((route, i) => <Route key={i} {...route.route} />)}
+        <Redirect path="/" to={{pathname: '/index'}} />
       </div>
     )
   }

@@ -3,7 +3,9 @@ import Main from '../../views/main/'
 export default [
   {
     name: '首页',
+    key: '/',
     route: {
+      exact: true,
       path: '/',
       component: Main
     }
