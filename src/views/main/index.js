@@ -16,7 +16,6 @@ class Main extends Component {
 
   componentDidMount () {
     this.props.history.push(mainRouterConfig[0].route.path)
-    console.log(this.props.match)
   }
 
   state = {
@@ -33,7 +32,12 @@ class Main extends Component {
 
   menuOnClick = ({item, key, keyPath}) => {
     if (this.state.currentSelect === key) return
-    this.props.history.push(this.props.match.path + '/' + key)
+
+    let current = mainRouterConfig.filter(v => {
+      return v.key === key
+    })
+
+    this.props.history.push(current[0].route.path)
     this.setState({currentSelect: key})
   }
 
