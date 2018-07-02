@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
+import Bundle from '../../../lib/Bundle'
 
 export default class List extends Component {
 
   render () {
     return (
-      <div>
-        列表页面
-      </div>
+      <Bundle load={() => import('./List')}>
+        {(List) => <List {...this.props}/>}
+      </Bundle>
     )
   }
 }

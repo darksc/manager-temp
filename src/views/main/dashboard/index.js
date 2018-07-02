@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+import Bundle from '../../../lib/Bundle'
 
 export default class Dashboard extends Component {
 
   render () {
-
     return (
-      <div>
-        统计页面
-      </div>
+      <Bundle load={() => import('./Dashboard')}>
+        {(Dashboard) => <Dashboard {...this.props}/>}
+      </Bundle>
     )
   }
+
 }
