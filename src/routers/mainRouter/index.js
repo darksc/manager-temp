@@ -4,18 +4,31 @@
  */
 
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
 import routerConfig from "./config"
 
-class AppRouter extends Component {
+class MainRouter extends Component {
+
+  componentWillMount () {
+    this.setState({
+      local: this.props.loacation
+    })
+  }
+
+  state = {
+    local: {}
+  }
 
   render () {
     return (
       <div className="main-module">
-        {routerConfig.map((route, i) => <Route key={i} {...route.route} />)}
+        <Switch>
+            {routerConfig.map((route, i) => <Route key={i} {...route.route} />)}
+            <Route component={routerConfig[0].route.component} />
+        </Switch>
       </div>
     )
   }
 }
 
-export default AppRouter
+export default withRouter(MainRouter)

@@ -16,7 +16,7 @@ const {Header, Sider, Content} = Layout
 class Main extends Component {
 
   componentDidMount () {
-    this.props.history.push(mainRouterConfig[0].route.path)
+    // this.props.history.push(mainRouterConfig[0].route.path)
   }
 
   state = {
