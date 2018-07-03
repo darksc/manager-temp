@@ -9,16 +9,6 @@ import routerConfig from "./config"
 
 class MainRouter extends Component {
 
-  componentWillMount () {
-    this.setState({
-      local: this.props.loacation
-    })
-  }
-
-  state = {
-    local: {}
-  }
-
   render () {
     return (
       <div className="main-module">

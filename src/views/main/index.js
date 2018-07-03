@@ -13,16 +13,27 @@ moment.updateLocale('zh-cn', momentLocale)
 
 const {Header, Sider, Content} = Layout
 
+const filterPath = (path) => {
+  let obj = mainRouterConfig.filter(v => {
+    return v.route.path === path
+  })
+  return obj.length > 0 ? obj[0] : null
+}
+
 class Main extends Component {
 
-  componentDidMount () {
-    // this.props.history.push(mainRouterConfig[0].route.path)
-  }
+  constructor (props) {
+    super(props)
 
-  state = {
-    user: 'admin',
-    collapsed: false,
-    currentSelect: mainRouterConfig[0].key
+    let location = this.props.location
+    let current = filterPath(location.pathname)
+
+    this.state = {
+      user: 'admin',
+      collapsed: false,
+      currentSelect: current || mainRouterConfig[0]
+    }
+
   }
 
   toggle = () => {
@@ -32,14 +43,10 @@ class Main extends Component {
   }
 
   menuOnClick = ({item, key, keyPath}) => {
-    if (this.state.currentSelect === key) return
-
-    let current = mainRouterConfig.filter(v => {
-      return v.key === key
-    })
-
-    this.props.history.push(current[0].route.path)
-    this.setState({currentSelect: key})
+    if (this.state.currentSelect.route.path === key) return
+    let current = filterPath(key)
+    this.props.history.push(current.route.path)
+    this.setState({currentSelect: current})
   }
 
   render () {
@@ -53,7 +60,7 @@ class Main extends Component {
 
     const menu = mainRouterConfig.map((v) => {
       return (
-        <Menu.Item key={v.key}>
+        <Menu.Item key={v.route.path}>
           <Icon type={v.icon}/>
           <span>{v.name}</span>
         </Menu.Item>
@@ -77,7 +84,7 @@ class Main extends Component {
             </div>
             <Menu theme="dark"
                   mode="inline"
-                  defaultSelectedKeys={[this.state.currentSelect]}
+                  defaultSelectedKeys={[this.state.currentSelect.route.path]}
                   onClick={this.menuOnClick}
             >
               {menu}
