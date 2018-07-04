@@ -6,7 +6,7 @@ import reducers from './store/reducers/'
 
 import AppRouter from './routers/appRouter/'
 
-import './App.css';
+import './App.scss';
 
 const store = createStore(
   reducers,

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Bundle from '../../../lib/Bundle'
+import Bundle from '../../../lib/bundle'
+import './index.scss'
 
 export default class Dashboard extends Component {
 

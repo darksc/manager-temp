@@ -60,6 +60,10 @@
     }
     .main-content {
       flex: none;
+      height: calc(100% - 50px);
+      .main-module {
+        height: 100%;
+      }
     }
     
   }

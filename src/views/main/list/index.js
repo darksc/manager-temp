@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Bundle from '../../../lib/Bundle'
+import Bundle from '../../../lib/bundle'
 
 export default class List extends Component {
 

@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import Scrollbar from '../../../lib/scrollbar'
 
 export default class Dashboard extends Component {
   render () {
     return (
-      <h1>统计页面</h1>
+      <div className="dashboard-wrap">
+        <Scrollbar className="s-scrollbar">
+
+        </Scrollbar>
+      </div>
     )
   }
 }
