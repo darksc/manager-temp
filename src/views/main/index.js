@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { Layout, Menu, Icon } from 'antd'
-import moment from 'moment'
-import momentLocale from 'moment/locale/zh-cn'
+import day from 'dayjs'
+import dayLocale from 'dayjs/locale/zh-cn'
 
 import MainRouter from '../../routers/mainRouter/'
 import mainRouterConfig from '../../routers/mainRouter/config'
 
 import './index.scss'
 
-moment.updateLocale('zh-cn', momentLocale)
+day.locale('zh-cn', dayLocale)
 
 const {Header, Sider, Content} = Layout
 
@@ -94,7 +94,7 @@ class Main extends Component {
           <Layout className="main-right">
             <Header className="main-header">
               <ul className="main-header-tools">
-                <li>{moment(new Date()).format('YYYY-MM-DD dddd')}</li>
+                <li>{day(new Date()).format('YYYY-MM-DD dddd')}</li>
                 <li>{this.state.user}</li>
                 <li>
                   <Icon type="logout" />
