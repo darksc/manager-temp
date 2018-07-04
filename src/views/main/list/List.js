@@ -3,7 +3,11 @@ import React, { Component } from 'react'
 export default class List extends Component {
   render () {
     return (
-      <h1>列表页面</h1>
+      <div className="list-wrap">
+        <div className="list-content">
+
+        </div>
+      </div>
     )
   }
 }

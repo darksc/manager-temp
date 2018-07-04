@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Bundle from '../../../lib/bundle'
 
+import './index.scss'
+
 export default class List extends Component {
 
   render () {
