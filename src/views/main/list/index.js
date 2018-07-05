@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Bundle from '../../../lib/bundle'
+import Bundle from '../../../libs/bundle'
 
 import './index.scss'
 
