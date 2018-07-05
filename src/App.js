@@ -15,6 +15,11 @@ const store = createStore(
 
 
 class App extends Component {
+
+  componentWillMount () {
+    console.log(config.name)
+  }
+
   render() {
     return (
       <Provider store={store}>

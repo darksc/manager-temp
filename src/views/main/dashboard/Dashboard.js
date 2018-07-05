@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Scrollbar from '../../../lib/scrollbar'
+import Scrollbar from '../../../libs/scrollbar'
 
 export default class Dashboard extends Component {
   render () {
