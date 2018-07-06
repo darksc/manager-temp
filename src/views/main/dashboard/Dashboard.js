@@ -6,7 +6,31 @@ export default class Dashboard extends Component {
     return (
       <div className="dashboard-wrap">
         <Scrollbar className="s-scrollbar">
-
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
+          <h1>测试滚动条</h1>
         </Scrollbar>
       </div>
     )
