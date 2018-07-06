@@ -72,8 +72,28 @@
           line-height: 50px;
           height: 50px;
         }
+
+        .main-content-form {
+          height: 60px;
+        }
+        .main-content-table {
+          height: calc(100% - 60px);
+          .ant-table-small {
+            border-width: 1px 0 1px 0 !important;
+          }
+          .table-btn-wrap {
+            span {
+              color: #1a82ee;
+              transition: .3s;
+              &:hover {
+                opacity: .5;
+                cursor: pointer;
+              }
+            }
+          }
+        }
       }
     }
-    
+
   }
 }
