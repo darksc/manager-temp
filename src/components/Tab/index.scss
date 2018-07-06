@@ -1,0 +1,22 @@
+.s-tab-wrap {
+  background: #fff;
+  ul {
+    li {
+      display: inline-block;
+      span {
+        display: inline-block;
+        height: 50px;
+        padding: 0 5px;
+        border-bottom: 3px solid rgba(255, 255, 255, 0);
+        transition: .3s;
+        &:hover {
+          cursor: pointer;
+          border-color: #1a82ee;
+        }
+        &.selected {
+          border-color: #1a82ee;
+        }
+      }
+    }
+  }
+}

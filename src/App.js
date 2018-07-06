@@ -17,7 +17,7 @@ const store = createStore(
 class App extends Component {
 
   componentWillMount () {
-    console.log(config.name)
+    console.log('read the globals config.js file - project name: ', `< ${config.name} >`)
   }
 
   render() {
