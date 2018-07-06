@@ -27,7 +27,7 @@ export default class List extends Component {
   }
 
   handleClick = item => {
-      this.setState({current: item})
+    this.setState({current: item})
   }
 
   render () {
