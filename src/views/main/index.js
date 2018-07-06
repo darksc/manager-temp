@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { Layout, Menu, Icon } from 'antd'
-import Tab from '../../components/Tab'
+
 import day from 'dayjs'
 import dayLocale from 'dayjs/locale/zh-cn'
 
@@ -32,8 +32,7 @@ class Main extends Component {
     this.state = {
       user: 'admin',
       collapsed: false,
-      currentSelect: current || mainRouterConfig[0],
-      tabs: current.tabs || []
+      currentSelect: current || mainRouterConfig[0]
     }
 
   }
@@ -49,13 +48,6 @@ class Main extends Component {
     let current = filterPath(key)
     this.props.history.push(current.route.path)
     this.setState({currentSelect: current})
-    this.setTabs(current)
-  }
-
-  setTabs = (current) => {
-    this.setState({
-      tabs: current.tabs || []
-    })
   }
 
   render () {
@@ -102,10 +94,6 @@ class Main extends Component {
 
           <Layout className="main-right">
             <Header className="main-header">
-
-              <div className="main-header-tabs">
-                <Tab tabs={this.state.tabs}/>
-              </div>
 
               <ul className="main-header-tools">
                 <li>{day(new Date()).format('YYYY-MM-DD dddd')}</li>

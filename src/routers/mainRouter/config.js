@@ -20,21 +20,7 @@ export default [
     route: {
       path: '/index/list',
       component: List
-    },
-    tabs: [
-      {
-        code: '0',
-        label: '全部'
-      },
-      {
-        code: '1',
-        label: '已确认'
-      },
-      {
-        code: '2',
-        label: '未确认'
-      }
-    ]
+    }
   },
   {
     name: '设置',

@@ -14,49 +14,55 @@ ul, li {
   padding: 0;
   margin: 0;
 }
+.fix-overflow:before {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
 .s-scrollbar {
 
-.s-scrollbar-horizontal-track, .s-scrollbar-vertical-track, .s-scrollbar-square {
-  opacity: 0 !important;
-  transition: .3s;
-}
-&:hover {
-.s-scrollbar-horizontal-track, .s-scrollbar-vertical-track, .s-scrollbar-square {
-  opacity: 1 !important;
-}
-}
-.s-scrollbar-vertical-track {
-  background-color: transparent;
-  width: 10px;
-  transition: opacity 0.3s;
-}
+  .s-scrollbar-horizontal-track, .s-scrollbar-vertical-track, .s-scrollbar-square {
+    opacity: 0 !important;
+    transition: .3s;
+  }
+  &:hover {
+    .s-scrollbar-horizontal-track, .s-scrollbar-vertical-track, .s-scrollbar-square {
+      opacity: 1 !important;
+    }
+  }
+  .s-scrollbar-vertical-track {
+    background-color: transparent;
+    width: 10px;
+    transition: opacity 0.3s;
+  }
 
-.s-scrollbar-horizontal-track {
-  background-color: transparent;
-  height: 10px;
-  transition: opacity 0.3s;
-}
+  .s-scrollbar-horizontal-track {
+    background-color: transparent;
+    height: 10px;
+    transition: opacity 0.3s;
+  }
 
-.s-scrollbar-vertical-handler {
-  width: 8px;
-  right: 1px;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.3s;
-&:hover {
-   background-color: rgba(0, 0, 0, 0.8);
- }
-}
+  .s-scrollbar-vertical-handler {
+    width: 8px;
+    right: 1px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
 
-.s-scrollbar-horizontal-handler {
-  height: 8px;
-  bottom: 1px;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.3s;
-&:hover {
-   background-color: rgba(0, 0, 0, 0.8);
- }
-}
+  .s-scrollbar-horizontal-handler {
+    height: 8px;
+    bottom: 1px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
 
 }

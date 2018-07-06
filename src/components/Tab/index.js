@@ -5,11 +5,12 @@ import './index.scss'
 export default class index extends Component {
 
   state = {
-    current: this.props.tabs[0] || {}
+    current: this.props.current
   }
 
   handleClick = (item) => {
     this.setState({current: item})
+    this.props.onClick(item)
   }
 
   render () {
