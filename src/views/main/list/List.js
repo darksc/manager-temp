@@ -130,7 +130,7 @@ export default class List extends Component {
               dataSource={this.state.data}
               rowKey="id"
               loading={this.state.loading}
-              pagination={{ pageSize: 50, total: 1000 }}
+              pagination={{ pageSize: 50, total: 928, size: 'small', showTotal: (total, range) => `${range[0]} - ${range[1]}, 共 ${total} 条` }}
               scroll={{ y: this.state.y }}/>
           </div>
         </div>
