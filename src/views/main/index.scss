@@ -82,11 +82,10 @@
             border-width: 1px 0 1px 0 !important;
           }
           .table-btn-wrap {
-            span {
-              color: #1a82ee;
+            .anticon {
               transition: .3s;
               &:hover {
-                opacity: .5;
+                color: #1a82ee;
                 cursor: pointer;
               }
             }

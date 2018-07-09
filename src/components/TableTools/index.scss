@@ -1,0 +1,50 @@
+.s-table-tools-wrap {
+  height: 60px;
+  line-height: 60px;
+  padding: 0 15px;
+  overflow: hidden;
+  .table-search {
+    float: left;
+    .ant-form-inline {
+      margin-top: 10px;
+    }
+  }
+  .table-btn {
+    float: right;
+    font-size: 20px;
+    .anticon {
+      transition: .3s;
+      &:hover {
+        cursor: pointer;
+        color: #1a82ee;
+      }
+    }
+
+    .switch-btn {
+      background: #fff;
+      color: #fff;
+      float: right;
+      margin-left: 15px;
+      border-radius: 0 0 50px 50px;
+      width: 50px;
+      height: 55px;
+      line-height: 50px;
+      text-align: center;
+      transition: .3s;
+      border: 2px solid #1a82ee;
+      border-top: none;
+      &:hover {
+        cursor: pointer;
+        background: #1a82ee;
+        span {
+          color: #fff;
+        }
+      }
+      span {
+        transition: .3s;
+        font-size: 16px;
+        color: #1a82ee;
+      }
+    }
+  }
+}

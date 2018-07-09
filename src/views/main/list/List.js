@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
 import Tab from '../../../components/Tab'
+import TableTools from '../../../components/TableTools'
 
-import { Table, Divider } from 'antd'
+import { Table, Divider, Icon, Tooltip } from 'antd'
 
 
 import { getShops } from '../../../services'
@@ -66,11 +67,17 @@ export default class List extends Component {
     title: '操作',
     render: (text, record, index) => (
       <div className="table-btn-wrap">
-        <span>删除</span>
+        <Tooltip placement="bottom" title="删除">
+          <Icon type="delete"/>
+        </Tooltip>
         <Divider type="vertical"/>
-        <span>确认</span>
+        <Tooltip placement="bottom" title="确认">
+          <Icon type="check-circle-o"/>
+        </Tooltip>
         <Divider type="vertical"/>
-        <span>取消</span>
+        <Tooltip placement="bottom" title="取消">
+          <Icon type="close-circle-o"/>
+        </Tooltip>
     </div>
     ),
     width: 150,
@@ -113,7 +120,7 @@ export default class List extends Component {
 
         <div className="list-content">
           <div className="main-content-form">
-
+            <TableTools />
           </div>
           <div className="main-content-table">
             <Table
