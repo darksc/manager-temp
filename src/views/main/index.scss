@@ -57,6 +57,11 @@
         .anticon-logout {
           font-size: 20px;
           color: #1a82ee;
+          transition: .3s;
+          &:hover {
+            cursor: pointer;
+            color: #ff3818;
+          }
         }
       }
     }
